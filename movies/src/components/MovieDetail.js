@@ -14,7 +14,9 @@ class MovieDetail extends Component {
         <h1>{this.props.selectedMovie.title}</h1>
         <h3>Director: {this.props.selectedMovie.director}</h3>
         <h3>MetaScore: {this.props.selectedMovie.metascore}</h3>
-        <h3>Stars: {this.props.selectedMovie.stars.toString()}</h3>
+        <h3>Stars: {this.props.selectedMovie.stars.map((star) => 
+          star + ', '
+        )}</h3>
       </div>
     );
   }
