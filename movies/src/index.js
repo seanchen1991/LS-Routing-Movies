@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Movies from './components/Movies';
 import MovieDetail from './components/MovieDetail';
+import NewMovieForm from './components/NewMovieForm';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Router>
       <div>
         <Route exact path="/" component={App} />
+        <Route exact path="/new-movie" component={NewMovieForm} />
         <Route exact path="/movies" component={Movies} />
         <Route path="/movies/:id" component={MovieDetail} />
       </div>

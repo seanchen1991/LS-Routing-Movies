@@ -9,10 +9,13 @@ class MovieDetail extends Component {
 
   render() {
     if (this.props.selectedMovie === null) return null;
+    console.log(this.props);
     return (
       <div>
         <h1>{this.props.selectedMovie.title}</h1>
+        <h3>Director: {this.props.selectedMovie.director}</h3>
         <h3>MetaScore: {this.props.selectedMovie.metascore}</h3>
+        <h3>Stars: {this.props.selectedMovie.stars.toString()}</h3>
       </div>
     );
   }
