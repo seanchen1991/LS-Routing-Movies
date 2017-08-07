@@ -9,7 +9,6 @@ class MovieDetail extends Component {
 
   render() {
     if (this.props.selectedMovie === null) return null;
-    console.log(this.props);
     return (
       <div>
         <h1>{this.props.selectedMovie.title}</h1>
